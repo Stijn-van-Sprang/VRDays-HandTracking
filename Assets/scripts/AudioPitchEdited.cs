@@ -7,6 +7,9 @@ public class AudioPitchEdited : MonoBehaviour
 {
     public AudioSource AudioPavement;
     public GameObject RotatingValve;
+    public float PitchValue;
+
+    private float OldValueRotator;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +19,17 @@ public class AudioPitchEdited : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        AudioPavement.pitch = RotatingValve.gameObject.transform.rotation.z;
-        Debug.Log("Pitch of " + gameObject.name + " changed to " + RotatingValve.gameObject.transform.rotation.z);
+        Debug.Log(RotatingValve.gameObject.transform.rotation.y);
+        AudioPavement.pitch = PitchValue;
+
+        if(RotatingValve.gameObject.transform.rotation.y < OldValueRotator)
+        {
+            OldValueRotator = RotatingValve.gameObject.transform.rotation.y;
+            PitchValue++;
+        } else if(RotatingValve.gameObject.transform.rotation.y > OldValueRotator)
+        {
+            OldValueRotator = RotatingValve.gameObject.transform.rotation.y;
+            PitchValue--;
+        }
     }
 }
