@@ -142,8 +142,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c675b7c0bae42a44a00ae9ab01c4674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioPavement: {fileID: 0}
+  AudioPavement: {fileID: 6211615960154180202}
   RotatingValve: {fileID: 0}
+  PitchValue: 0
 --- !u!1 &5986465773615996101
 GameObject:
   m_ObjectHideFlags: 0
