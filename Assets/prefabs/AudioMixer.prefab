@@ -145,6 +145,7 @@ MonoBehaviour:
   AudioPavement: {fileID: 6211615960154180202}
   RotatingValve: {fileID: 0}
   PitchValue: 0
+  FlyingWheel: {fileID: 0}
 --- !u!1 &5986465773615996101
 GameObject:
   m_ObjectHideFlags: 0
