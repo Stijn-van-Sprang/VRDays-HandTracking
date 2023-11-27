@@ -19,6 +19,7 @@ public class TriggerSound : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if(collision.gameObject.name == "SoundTrigger")
         SoundOrigin.GetComponent<AudioSource>().Play();
     }
 }
