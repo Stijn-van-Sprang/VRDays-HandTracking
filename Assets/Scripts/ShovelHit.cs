@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class ShovelHit : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public GameObject SoundOrigin;
+    private void OnTriggerEnter(Collider other)
     {
-        
+        Debug.Log("hovel hit");
+        SoundOrigin.GetComponent<AudioSource>().Play();
     }
 }
