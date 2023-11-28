@@ -2984,12 +2984,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 709533827}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.50000006, y: -0.49999997, z: -0.50000006, w: 0.49999997}
-  m_LocalPosition: {x: 0, y: -0.000069, z: 0.0001188}
-  m_LocalScale: {x: 0.0066666678, y: 0.028923841, z: 0.006666671}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -1.5189221, y: 0.77582, z: 0.27547932}
+  m_LocalScale: {x: 1, y: 4.338576, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5918408724607477211}
+  m_Children:
+  - {fileID: 5918408724607477211}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &709533829
 MeshCollider:
@@ -3861,18 +3862,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   influencers:
-  - objectWithValue: {fileID: 0}
-    type: 0
-    amount: {x: 0, y: 1, z: 0}
-    useNormalized: 1
   - objectWithValue: {fileID: 1580230659}
     type: 1
     amount: {x: 0, y: 0, z: 1}
     useNormalized: 0
-  - objectWithValue: {fileID: 1586830738}
-    type: 2
-    amount: {x: 1, y: 1, z: 1}
-    useNormalized: 1
 --- !u!23 &836589323
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8415,7 +8408,7 @@ MonoBehaviour:
   m_TeleportPreview: {fileID: 0}
   m_TeleportMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 0
   m_LineRenderer: {fileID: 0}
   m_InvalidTeleportMaterial: {fileID: 2100000, guid: fd840c32756339a4581e696895aca8e6,
     type: 2}
@@ -9312,13 +9305,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6442885029289623393}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -1.5189221, y: 0.758, z: 0.26512933}
-  m_LocalScale: {x: 150, y: 150, z: 150}
+  m_LocalRotation: {x: -0.50000006, y: 0.49999997, z: 0.50000006, w: 0.49999997}
+  m_LocalPosition: {x: -0.01034999, y: -0.0041073384, z: 0}
+  m_LocalScale: {x: 149.99998, y: 149.99997, z: 34.573555}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 709533828}
-  m_Father: {fileID: 0}
+  m_Children: []
+  m_Father: {fileID: 709533828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6442885029289623393
 GameObject:
@@ -9384,4 +9376,4 @@ SceneRoots:
   - {fileID: 991636780}
   - {fileID: 1351478961}
   - {fileID: 1752160599}
-  - {fileID: 5918408724607477211}
+  - {fileID: 709533828}
