@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioPitchEdited : MonoBehaviour
@@ -8,25 +5,44 @@ public class AudioPitchEdited : MonoBehaviour
     public AudioSource AudioPavement;
     public GameObject RotatingValve;
     public float PitchValue;
+    public float PitchChangeRate = 1.0f; // Adjust this value in the Inspector
+
+    public enum RotationAxis { X, Y, Z };
+    public RotationAxis rotationAxis = RotationAxis.Y;
 
     private float OldValueRotator;
-        
-    
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(RotatingValve.gameObject.transform.rotation.y);
+        float rotationValue = 0f;
+
+        switch (rotationAxis)
+        {
+            case RotationAxis.X:
+                rotationValue = RotatingValve.transform.rotation.eulerAngles.x;
+                break;
+            case RotationAxis.Y:
+                rotationValue = RotatingValve.transform.rotation.eulerAngles.y;
+                break;
+            case RotationAxis.Z:
+                rotationValue = RotatingValve.transform.rotation.eulerAngles.z;
+                break;
+        }
+
+        Debug.Log(rotationValue);
+
         AudioPavement.pitch = PitchValue;
 
-        if(RotatingValve.gameObject.transform.rotation.y < OldValueRotator)
+        if (rotationValue < OldValueRotator)
         {
-            OldValueRotator = RotatingValve.gameObject.transform.rotation.y;
-            PitchValue++;
-        } else if(RotatingValve.gameObject.transform.rotation.y > OldValueRotator)
+            OldValueRotator = rotationValue;
+            PitchValue += PitchChangeRate;
+        }
+        else if (rotationValue > OldValueRotator)
         {
-            OldValueRotator = RotatingValve.gameObject.transform.rotation.y;
-            PitchValue--;
+            OldValueRotator = rotationValue;
+            PitchValue -= PitchChangeRate;
         }
     }
 }
