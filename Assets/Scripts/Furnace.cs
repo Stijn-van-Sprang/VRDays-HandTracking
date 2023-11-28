@@ -4,18 +4,47 @@ using UnityEngine;
 
 public class Furnace : MonoBehaviour
 {
+    public int coalcounter;
+    public GameObject furnaceholl;
+    public GameObject coal;
+
+    public bool coalON;
+
+    private void Start()
+    {
+        coalON = false;
+        coal.SetActive(false);
+        furnaceholl.SetActive(false);
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == "coal")
         {
-            Debug.Log("coal");
+            coal.SetActive(true);
+            coalON = true;
+            Debug.Log("coal pickup");
         }
 
-        if (other.gameObject.name == "furnace")
+        if (other.gameObject.name == "furnace" && coalON)
         {
-            Debug.Log("furnace");
+            coal.SetActive(false);
+            coalcounter++;
+            coalON = false;
+            Debug.Log("coal in furnace");
         }
 
         Debug.Log("test 1");
+    }
+
+    public void Update()
+    {
+        if (coalcounter > 0)
+        {
+            furnaceholl.SetActive(true);
+        }
+        else
+        {
+            furnaceholl.SetActive(false);
+        }
     }
 }
