@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RotatingWheel : MonoBehaviour
 {
+    public float rotationSpeed = 30f;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +14,6 @@ public class RotatingWheel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
     }
 }
