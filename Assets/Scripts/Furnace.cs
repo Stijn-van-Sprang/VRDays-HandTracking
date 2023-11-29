@@ -47,4 +47,9 @@ public class Furnace : MonoBehaviour
             furnaceholl.SetActive(false);
         }
     }
+
+    public int GETTIMEMIN()
+    {
+        return coalcounter;      
+    }
 }
