@@ -7,7 +7,7 @@ public class TriggerSound : MonoBehaviour
     public GameObject SoundOrigin;
     public bool pistonsound;
     public Furnace furnace;
-    public Gameobject effect;
+    public ParticleSystem effect;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +21,7 @@ public class TriggerSound : MonoBehaviour
         {
             Debug.Log("sound ");
             Debug.Log(furnace.GETTIMEMIN());
-		 effect.SetActive(true);
+		    effect.Play(true);
             SoundOrigin.GetComponent<AudioSource>().Play();
             yield return new WaitForSeconds(8 - furnace.GETTIMEMIN());
         }
