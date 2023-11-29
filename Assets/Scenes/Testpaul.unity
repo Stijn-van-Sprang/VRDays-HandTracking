@@ -7389,7 +7389,7 @@ MonoBehaviour:
   influencers:
   - objectWithValue: {fileID: 1580230659}
     type: 0
-    amount: {x: 0, y: 1, z: 0}
+    amount: {x: 0, y: 0.01, z: 0}
     useNormalized: 0
 --- !u!114 &394340109
 MonoBehaviour:
@@ -14410,7 +14410,7 @@ MonoBehaviour:
   influencers:
   - objectWithValue: {fileID: 1838479732}
     type: 0
-    amount: {x: 0, y: 1, z: 0}
+    amount: {x: 0, y: 0.01, z: 0}
     useNormalized: 0
 --- !u!136 &513202927
 CapsuleCollider:
@@ -27349,7 +27349,7 @@ MonoBehaviour:
       motionGridSize: 64
       colorBlindnessType: 0
       colorBlindnessStrength: 1
-  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_Resources: {fileID: 0}
   m_ShowToolkit: 1
   m_ShowCustomSorter: 1
   breakBeforeColorGrading: 0
