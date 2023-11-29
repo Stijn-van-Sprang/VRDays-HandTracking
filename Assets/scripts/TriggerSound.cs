@@ -12,7 +12,6 @@ public class TriggerSound : MonoBehaviour
     void Start()
     {
         pistonsound = false;
-	   effect = GetComponent<ParticleSystem>();
     }
 
     IEnumerator waiter()
@@ -27,7 +26,7 @@ public class TriggerSound : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
 
         if (collision.gameObject.name == "SoundTrigger")
@@ -38,7 +37,7 @@ public class TriggerSound : MonoBehaviour
 ;        }
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnTriggerExit(Collider collision)
     {
         if (collision.gameObject.name == "SoundTrigger")
         {

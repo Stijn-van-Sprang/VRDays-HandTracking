@@ -30,7 +30,7 @@ public class AudioPitchEdited : MonoBehaviour
                 break;
         }
 
-        Debug.Log(rotationValue);
+        //Debug.Log(rotationValue);
 
         AudioPavement.pitch = PitchValue;
 

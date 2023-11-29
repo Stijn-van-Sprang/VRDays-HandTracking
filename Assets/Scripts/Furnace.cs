@@ -31,6 +31,7 @@ public class Furnace : MonoBehaviour
             coalcounter++;
             coalON = false;
             Debug.Log("coal in furnace");
+            gameObject.GetComponent<AudioSource>().Play();
         }
 
         Debug.Log("test 1");
